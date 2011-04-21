@@ -1,6 +1,11 @@
 = tagelizer
 
-Description goes here.
+Install with
+  gem install tagelizer
+
+Use it
+  tagy = Tagelizer.new('de')
+  tagy.parse "Der Tag heute ist aber sonnig!"
 
 == Contributing to tagelizer
  
