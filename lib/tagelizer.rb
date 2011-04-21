@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler'
-Bundler.setup
+require 'bundler/setup'
 require 'raspell'
 require 'lingua/stemmer'
 
