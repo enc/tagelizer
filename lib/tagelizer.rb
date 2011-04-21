@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'bundler'
-Bundler.require(:default)
+Bundler.setup
+require 'raspell'
+require 'lingua/stemmer'
 
 class Tagelizer
 
