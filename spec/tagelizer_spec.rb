@@ -1,7 +1,27 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "Tagelizer" do
-  it "fails" do
-    fail "hey buddy, you should probably rename this file and start specing for real"
+  it "has a locale set" do
+    tagi = Tagelizer.new('ru')
+    tagi.dictionary.should == 'ru'
+  end
+
+
+  it "splits strings" do
+    tagi = Tagelizer.new
+    text = "Hi my jealous 34 friend!"
+    tagi.parse(text).should == ["jealous", "friend"]
+  end
+
+  it "can fix mistakes" do
+    tagi = Tagelizer.new
+    text = "Hi my jealous 34 freind!"
+    tagi.parse(text).should == ["jealous", "Friend"]
+  end
+
+  it "can use basic form of words" do
+    tagi = Tagelizer.new
+    text = "He reads a book."
+    tagi.parse(text).should == ["read", "book"]
   end
 end

@@ -15,14 +15,15 @@ Jeweler::Tasks.new do |gem|
   gem.name = "tagelizer"
   gem.homepage = "http://github.com/enc/tagelizer"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{converts text to array of words for tags}
+  gem.description = %Q{converts text to an array of words. Uses stemming and spellchecker to produce better results. Build to convert descriptions to tags.}
   gem.email = "git@encc.de"
   gem.authors = ["Jonatan Reiners"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
-  #  gem.add_development_dependency 'rspec', '> 1.2.3'
+  gem.add_runtime_dependency 'raspell', '>=1.2'
+  gem.add_runtime_dependency 'ruby', '>=0.9.1'
+  gem.add_development_dependency 'rspec', '>=2.3.0'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
