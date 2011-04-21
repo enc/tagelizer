@@ -21,7 +21,7 @@ class Tagelizer
 
   def build_speller
     speller = Aspell.new(dictionary)
-    speller.suggestion_mode = actual_suggestion_mode
+    speller.suggestion_mode = 'normal'
     actual_options.each do |key, value|
       speller.set_option key, value
     end
