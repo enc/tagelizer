@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tagelizer}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jonatan Reiners"]
@@ -26,7 +26,8 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/tagelizer.rb",
     "spec/spec_helper.rb",
-    "spec/tagelizer_spec.rb"
+    "spec/tagelizer_spec.rb",
+    "tagelizer.gemspec"
   ]
   s.homepage = %q{http://github.com/enc/tagelizer}
   s.licenses = ["MIT"]
@@ -52,9 +53,6 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rb-fsevent>, [">= 0.3.5"])
       s.add_development_dependency(%q<guard-rspec>, [">= 0"])
       s.add_development_dependency(%q<growl>, [">= 0"])
-      s.add_runtime_dependency(%q<raspell>, [">= 1.2"])
-      s.add_runtime_dependency(%q<ruby>, [">= 0.9.1"])
-      s.add_development_dependency(%q<rspec>, [">= 2.3.0"])
     else
       s.add_dependency(%q<raspell>, ["= 1.2"])
       s.add_dependency(%q<ruby-stemmer>, [">= 0.9.1"])
@@ -66,9 +64,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rb-fsevent>, [">= 0.3.5"])
       s.add_dependency(%q<guard-rspec>, [">= 0"])
       s.add_dependency(%q<growl>, [">= 0"])
-      s.add_dependency(%q<raspell>, [">= 1.2"])
-      s.add_dependency(%q<ruby>, [">= 0.9.1"])
-      s.add_dependency(%q<rspec>, [">= 2.3.0"])
     end
   else
     s.add_dependency(%q<raspell>, ["= 1.2"])
@@ -81,9 +76,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rb-fsevent>, [">= 0.3.5"])
     s.add_dependency(%q<guard-rspec>, [">= 0"])
     s.add_dependency(%q<growl>, [">= 0"])
-    s.add_dependency(%q<raspell>, [">= 1.2"])
-    s.add_dependency(%q<ruby>, [">= 0.9.1"])
-    s.add_dependency(%q<rspec>, [">= 2.3.0"])
   end
 end
 
