@@ -22,6 +22,12 @@ describe "Tagelizer" do
   it "can use basic form of words" do
     tagi = Tagelizer.new
     text = "He reads a book."
-    tagi.parse(text).should == ["read", "book"]
+    tagi.parse(text).should == ["reads", "book"]
+  end
+
+  it "should compare stems" do
+    tagi = Tagelizer.new
+    text = "He reads a book as a reading."
+    tagi.parse(text).should == ["book", "reading"]
   end
 end

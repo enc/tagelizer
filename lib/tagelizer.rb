@@ -14,7 +14,7 @@ class Tagelizer
   end
 
   def parse( text )
-    text.split(" ").collect {|i| /(\w*)/.match(i)[1]}.select {|i| i.size > @minwordsize}.collect {|w| stemmer.stem corrected_word(w)}
+    remove_duplicates(text.split(" ").collect {|i| /(\w*)/.match(i)[1]}.select {|i| i.size > @minwordsize}.collect {|w| corrected_word(w)})
   end
 
   def speller
@@ -60,6 +60,15 @@ class Tagelizer
     options.keys.inject({}) do |hash, key|
       hash[key] = options[key].to_s
       hash
+    end
+  end
+
+  def remove_duplicates list
+    if list.empty?
+      []
+    else
+      tmp = list.pop
+      remove_duplicates(list.select { |word| stemmer.stem(word) != stemmer.stem(tmp) }) + [tmp]
     end
   end
 
